@@ -154,7 +154,6 @@ Item {
                     text: qsTr("X")
                     font.family: "Ubuntutt"
                     onClicked: stackLayout.currentIndex = 0
-
                 }
 
 
@@ -192,7 +191,10 @@ Item {
                                     false
                                 else
                                     true
-                        onClicked: botonestado.carga = true
+                        onClicked: {
+                            ioqml.button(0x780,"K")
+                            botonestado.carga = true
+                        }
                         font.pointSize: 20
                     }
 
@@ -208,7 +210,11 @@ Item {
                                      true
                                  else
                                      false
-                        onClicked: botonestado.carga = false
+                        onClicked:{
+                            botonestado.carga = false
+                            ioqml.button(0x780,"C")
+                        }
+
                         font.pointSize: 20
 
                     }

@@ -12,7 +12,7 @@ class can : public QObject
 public:
     explicit can(QObject *parent = nullptr);
     QCanBusDevice* caninit();
-    void send(QCanBusDevice*CANdevice, qint32 sendId, QByteArray sendPayload);
+    void send(QCanBusDevice* CANdevice, qint32 sendId, QByteArray sendPayload);
     QCanBusFrame receive(QCanBusDevice* CANdevice);
 
 signals:

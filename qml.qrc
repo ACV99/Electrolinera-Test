@@ -144,7 +144,6 @@
         <file>qml/Logo.ui.qml</file>
         <file>qml/Perfilactual.qml</file>
         <file>qml/principal.qml</file>
-        <file>qml/qtquickcontrols2.conf</file>
         <file>qml/Seleccionceldas.qml</file>
         <file>qml/Seleccionsondas.qml</file>
         <file>qml/Tension.ui.qml</file>

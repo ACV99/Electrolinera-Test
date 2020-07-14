@@ -2,6 +2,8 @@
 #include <QQmlApplicationEngine>
 #include <QQuickView>
 #include <QQmlContext>
+#include "can.h"
+#include "iocan.h"
 
 int main(int argc, char *argv[])
 {
@@ -10,7 +12,8 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
     QQuickView view;
     //Objects - Context Propeties
-
+    iocan iocan;
+    view.rootContext()->setContextProperty("ioqml", &iocan);
 
     //QML import - View start
     view.engine()->addImportPath("qrc:/qml/imports");

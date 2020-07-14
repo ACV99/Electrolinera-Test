@@ -31,7 +31,7 @@ QCanBusDevice* can::caninit()
     return CANdevice;
 }
 
-void can::send(QCanBusDevice* CANdevice, qint32 sendId,QByteArray sendPayload)
+void can::send(QCanBusDevice* CANdevice, qint32 sendId, QByteArray sendPayload)
 {
     //--------------------------------------------------------------------------
     //Frame = send elected ID + to send Payload
@@ -40,7 +40,7 @@ void can::send(QCanBusDevice* CANdevice, qint32 sendId,QByteArray sendPayload)
     QCanBusFrame frame;
     frame.setFrameId(sendId);    //Numero de 11bits
     frame.setPayload(sendPayload);      //Mensaje (de 0 a 8bytes)
-    //CANdevice->writeFrame(frame);
+    CANdevice->writeFrame(frame);
 }
 
 QCanBusFrame can::receive(QCanBusDevice *CANdevice)
