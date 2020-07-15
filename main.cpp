@@ -21,6 +21,8 @@ int main(int argc, char *argv[])
     if (!view.errors().isEmpty())
         return -1;
     view.show();
+    can objcan;
+    objcan.caninit();
 
 
     return app.exec();

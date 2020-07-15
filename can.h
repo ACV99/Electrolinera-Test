@@ -9,15 +9,19 @@ class can : public QObject
 {
     Q_OBJECT
 
+private:
+
 public:
+    std::unique_ptr<QCanBusDevice> CANdevice;
     explicit can(QObject *parent = nullptr);
-    QCanBusDevice* caninit();
-    void send(QCanBusDevice* CANdevice, qint32 sendId, QByteArray sendPayload);
-    QCanBusFrame receive(QCanBusDevice* CANdevice);
+    void caninit();
+    void send(qint32 sendId, QByteArray sendPayload);
+    QCanBusFrame receive();
 
 signals:
 
-
+public slots:
+    void framesRecievedSlot();
 };
 
 #endif // CAN_H

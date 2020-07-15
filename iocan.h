@@ -10,7 +10,7 @@ class iocan : public QObject
     Q_OBJECT
     //Estos parametros son reconocidos por la función, no los necesitan como entrada
     can objcan;
-    QCanBusDevice* CANdevice = objcan.caninit();
+
     int vTensiones[64];
 
 private:
@@ -32,8 +32,7 @@ public:
 
 signals:
 
-public slots:
-    void framesRecievedSlot();
+
 };
 
 #endif // BUTTON_H
