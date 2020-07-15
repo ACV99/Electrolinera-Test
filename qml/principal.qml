@@ -552,7 +552,9 @@ Item {
                         height: 50
                         text: qsTr("x")
                         font.family: "Ubuntutt"
-                        onClicked: pestanasconfig.currentIndex = 0
+                        onClicked: {
+                            pestanasconfig.currentIndex = 0
+                        }
                     }
                 }
 

@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
 
     QGuiApplication app(argc, argv);
     QQuickView view;
+
     //Objects - Context Propeties
     iocan iocan;
     view.rootContext()->setContextProperty("ioqml", &iocan);
@@ -21,6 +22,10 @@ int main(int argc, char *argv[])
     if (!view.errors().isEmpty())
         return -1;
     view.show();
+
+    QObject::connect(view.engine(), &QQmlEngine::quit,
+            &app, &QGuiApplication::quit);
+
     can objcan;
     objcan.caninit();
 

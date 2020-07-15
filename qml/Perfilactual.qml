@@ -28,6 +28,7 @@ Rectangle {
         highlighted: false
         display: AbstractButton.IconOnly
         flat: true
+        onClicked: Qt.quit()
         
         Image {
             id: image

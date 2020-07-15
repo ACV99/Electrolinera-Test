@@ -24,7 +24,7 @@ Rectangle {
         width: 70
         height: 70
         visible: if (botonestado.carga == false)
-                     false
+                     true   //VERSION DE PRUEBA INVERTIR PARA MASTER
                  else
                      true
         font.pointSize: 12
